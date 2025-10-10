@@ -35,16 +35,9 @@ def send_schedule(message):
 """)
 @bot.message_handler(commands=['info'])
 def info_send(message):
-    bot.send_message(message.chat.id, "Не придумал")
+    bot.send_message(message.chat.id, "Здесь будет информация об уроках")
 @bot.message_handler(commands=['homework'])
 def send_homework(message):
-    bot.send_message(message.chat.id, """
-Группа 1:
-    Сделать то
-Группа 2 :
-    Доделать это
-Группа 3 :
-    Отправить туда
-        
-                     """)
+    bot.send_message(message.chat.id, "Здесь будет информация о домашнем задании")
 bot.infinity_polling()
+
