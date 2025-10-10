@@ -23,4 +23,28 @@ def start_message(message):
     reply_markup=markup
         )
     print('Команда выполняется')
+@bot.message_handler(commands=['schedule'])
+def send_schedule(message):
+    bot.send_message(message.chat.id, """
+Группа 1:
+    Суббота - 15:00
+Группа 2 :
+    Воскресенье - 16:00
+Группа 3 :
+    Суббота 12:00
+""")
+@bot.message_handler(commands=['info'])
+def info_send(message):
+    bot.send_message(message.chat.id, "Не придумал")
+@bot.message_handler(commands=['homework'])
+def send_homework(message):
+    bot.send_message(message.chat.id, """
+Группа 1:
+    Сделать то
+Группа 2 :
+    Доделать это
+Группа 3 :
+    Отправить туда
+        
+                     """)
 bot.infinity_polling()
